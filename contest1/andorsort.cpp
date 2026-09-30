@@ -9,7 +9,7 @@ vector<int> numberize(str s, str::iterator it)
 {
 	vector<int> store;
 	int target = it - s.begin();
-	for (int i = 0;i<target;i++) {
+	for (int i = 0;i<=target;i++) {
 		if (s[i] == '1') store.push_back(1);
 		else store.push_back(0);
 	}
@@ -17,7 +17,7 @@ vector<int> numberize(str s, str::iterator it)
 }
 
 int OR_operation(str s, str::iterator target) {
-	int val = *(s.begin());
+	int val = 0;
 	int diff = target-s.begin();
 	vector<int> store = numberize(s, target);
 
@@ -29,7 +29,7 @@ int OR_operation(str s, str::iterator target) {
 }
 
 int AND_operation(str s, str::iterator target) {
-	int val = *(s.begin());
+	int val = 1;
 	int diff = target-s.begin();
 	vector<int> store = numberize(s, target);
 
